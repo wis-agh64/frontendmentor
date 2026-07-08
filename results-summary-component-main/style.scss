@@ -190,8 +190,12 @@ body {
 }
 
 #resultCircle {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
+}
+
+body, html {
+    height: 100%;
 }
 
 @media screen and (max-width: 630px) {
@@ -208,13 +212,12 @@ body {
         height: 100%;
     }
 
-    body {
-        overflow: hidden;
-    }
-
     #main {
         border-radius: 0px;
-        overflow: scroll;
+    }
+
+    body {
+        height: auto;
     }
 
     #resultPanel {
