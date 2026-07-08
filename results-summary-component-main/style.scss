@@ -188,6 +188,11 @@ body {
     box-shadow: 20px 20px 30px 15px hsla(241, 81%, 54%, 0.07);
 }
 
+#resultCircle {
+    height: 200px;
+    width: 200px;
+}
+
 @media screen and (max-width: 630px) {
     .flex-sm-col {
         display: flex;
@@ -202,12 +207,26 @@ body {
         height: 100%;
     }
 
+    body {
+        overflow: hidden;
+    }
+
     #main {
         border-radius: 0px;
+        overflow: scroll;
     }
 
     #resultPanel {
         border-top-right-radius: 0px;
         border-top-left-radius: 0px;
+    }
+
+    .attribution {
+        top: 5px;
+        color: white;
+    }
+
+    .attribution a:link {
+        color: white;
     }
 }
