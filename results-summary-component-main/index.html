@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="height-100" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Results summary component</title>
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="height-100 flex flex-column flex-justify-center flex-align-center bg-pale-blue">
+  <div id="main" class="height-sm-100 width-sm-100 flex flex-sm-col border-radius-20 bg-white shadow">
+    <div id="resultPanel" class="width-50 width-sm-100 p-10 border-radius-20 bg-grad-slate-royal flex flex-column flex-align-center flex-justify-space-between text-center">
+      <div class="fg-light-lavender mb-10 text-medium text-bold">Your Result</div>
+      <div class=" flex flex-column flex-justify-center bg-grad-violet-persian border-circular width-90 height-50 p-20 mb-10">
+        <div class="fg-white text-largest text-boldest">76</div>
+        <div class="fg-light-lavender">of 100</div>
+      </div>
+      <div class="fg-white mb-5 text-large text-bolder">Great</div>
+      <div class="fg-light-lavender text-small">You scored higher than 65% of the people who have taken these tests.</div>
+    </div>
+    <div class="width-50 width-sm-100 flex flex-column flex-justify-space-between p-5">
+      <div class="text-medium fg-dark-gray-blue text-bolder">Summary</div>
+      <div class="flex flex-justify-space-between flex-align-center bg-light-red-op p-5 mt-10 mb-5 border-radius-10">
+        <div class="flex flex-align-center fg-light-red"><img id="ReactionIcon" class="mr-5" src="./assets/images/icon-reaction.svg" alt="Reaction icon"> Reaction</div>
+        <div class="text-bolder"><span class="fg-dark-gray-blue" id="ReactionValue">80</span> <span class="op-30">/ 100</span></div>
+      </div>
+      <div class="flex flex-justify-space-between flex-align-center bg-orangey-yellow-op p-5 mb-5 border-radius-10">
+        <div class="flex flex-align-center fg-orangey-yellow"><img id="MemoryIcon" class="mr-5" src="./assets/images/icon-memory.svg" alt="Memory icon"> Memory</div>
+        <div class="text-bolder"><span class="fg-dark-gray-blue" id="MemoryValue">92</span> <span class="op-30">/ 100</span></div>
+      </div>
+      <div class="flex flex-justify-space-between flex-align-center bg-green-teal-op p-5 mb-5 border-radius-10">
+        <div class="flex flex-align-center fg-green-teal"><img id="VerbalIcon" class="mr-5" src="./assets/images/icon-verbal.svg" alt="Verbal icon"> Verbal</div>
+        <div class="text-bolder"><span class="fg-dark-gray-blue" id="VerbalValue">61</span> <span class="op-30">/ 100</span></div>
+      </div>
+      <div class="flex flex-justify-space-between flex-align-center bg-cobalt-blue-op p-5 mb-10 border-radius-10">
+        <div class="flex flex-align-center fg-cobalt-blue"><img id="VisualIcon" class="mr-5" src="./assets/images/icon-visual.svg" alt="Visual icon"> Visual</div>
+        <div class="text-bolder"><span class="fg-dark-gray-blue" id="VisualValue">72</span> <span class="op-30">/ 100</span></div>
+      </div>
+      <div class="fg-white bg-dark-gray-blue border-radius-20 text-center pt-5 pb-5 button">Continue</div>
+    </div>
+  </div>
+  <!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Wissam Alghabra</a>.
+  </footer> -->
+
+  <script src="./script.js"></script>
+</body>
+</html>

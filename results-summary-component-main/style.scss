@@ -1,0 +1,213 @@
+$font-stack: "Hanken Grotesk", sans-serif;
+$font-size-small: 14px;
+$font-size-medium: 18px;
+$font-size-large: 22px;
+$font-size-largest: 60px;
+$font-weight-bold: 500;
+$font-weight-bolder: 700;
+$font-weight-boldest: 800;
+
+.text-small {
+    font-size: $font-size-small;
+}
+
+.text-medium {
+    font-size: $font-size-medium;
+}
+
+.text-large {
+    font-size: $font-size-large;
+}
+
+.text-largest {
+    font-size: $font-size-largest;
+}
+
+.text-bold {
+    font-weight: $font-weight-bold;
+}
+
+.text-bolder {
+    font-weight: $font-weight-bolder;
+}
+
+.text-boldest {
+    font-weight: $font-weight-boldest;
+}
+
+$colors: (
+    "light-red": hsl(0, 100%, 67%),
+    "light-red-op": hsla(0, 100%, 67%, 0.05),
+    "orangey-yellow": hsl(39, 100%, 56%),
+    "orangey-yellow-op": hsla(39, 100%, 56%, 0.05),
+    "green-teal": hsl(166, 100%, 37%),
+    "green-teal-op": hsla(166, 100%, 37%, 0.05),
+    "cobalt-blue": hsl(234, 85%, 45%),
+    "cobalt-blue-op": hsl(234, 85%, 45%, 0.05),
+    "light-slate-blue": hsl(252, 100%, 67%),
+    "light-royal-blue": hsl(241, 81%, 54%),
+    "violet-blue": hsla(256, 72%, 46%, 1),
+    "persian-blue": rgba(36, 33, 202, 0),
+    "white": hsl(0, 0%, 100%),
+    "pale-blue": hsl(221, 100%, 96%),
+    "light-lavender": hsl(241, 100%, 89%),
+    "dark-gray-blue": hsl(224, 30%, 27%)
+);
+
+@each $name,$color in $colors {
+    .bg-#{$name} {
+        background-color: $color;
+    }
+
+    .fg-#{$name} {
+        color: $color;
+    }
+}
+
+$vals: 1,5,10,20,25,30,35,40,45,50,60,75,80,85,90,95,100;
+@each $v in $vals {
+    .height-#{$v} {
+        height: $v * 1%;
+    }
+
+    .width-#{$v} {
+        width: $v * 1%;
+    }
+
+    .p-#{$v} {
+        padding: $v * 1%;
+    }
+
+    .pt-#{$v} {
+        padding-top: $v * 1%;
+    }
+
+    .pb-#{$v} {
+        padding-bottom: $v * 1%;
+    }
+
+    .pr-#{$v} {
+        padding-right: $v * 1%;
+    }
+
+    .pl-#{$v} {
+        padding-left: $v * 1%;
+    }
+
+    .mt-#{$v} {
+        margin-top: $v * 1%;
+    }
+
+    .mb-#{$v} {
+        margin-bottom: $v * 1%;
+    }
+
+    .mr-#{$v} {
+        margin-right: $v * 1%;
+    }
+
+    .ml-#{$v} {
+        margin-left: $v * 1%;
+    }
+
+    .m-#{$v} {
+        margin: $v * 1%;
+    }
+
+    .op-#{$v} {
+        opacity: $v * 1%;
+    }
+}
+
+$radi: 5,10,15,20,25,30;
+@each $rad in $radi {
+    .border-radius-#{$rad} {
+        border-radius: #{$rad}px;
+    }
+}
+
+$flexvals: center, start, end, space-between, flex-start, flex-end, left, right;
+@each $val in $flexvals {
+    .flex-align-#{$val} {
+        align-items: $val;
+    }
+    
+    .flex-justify-#{$val} {
+        justify-content: $val;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: $font-stack;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.bg-grad-slate-royal {
+    background: HSL(252, 100%, 67%);
+    background: linear-gradient(180deg,rgba(120, 87, 255, 1) 0%, rgba(46, 43, 233, 1) 100%);
+}
+
+.button:hover {
+    cursor: pointer;    
+    background: HSL(252, 100%, 67%);
+    background: linear-gradient(180deg,rgba(120, 87, 255, 1) 0%, rgba(46, 43, 233, 1) 100%);
+}
+
+.bg-grad-violet-persian {
+    background: HSLA(256, 72%, 46%, 1);
+    background: linear-gradient(180deg, hsla(256, 72%, 46%, 1) 0%, hsla(241, 72%, 46%, 0) 100%);
+}
+
+.border-circular {
+    border-radius: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 5px;
+}
+
+.shadow {
+    box-shadow: 20px 20px 30px 15px hsla(241, 81%, 54%, 0.07);
+}
+
+@media screen and (max-width: 630px) {
+    .flex-sm-col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .width-sm-100 {
+        width: 100%;
+    }
+
+    .height-sm-100 {
+        height: 100%;
+    }
+
+    #main {
+        border-radius: 0px;
+    }
+
+    #resultPanel {
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+}
