@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - [Live site URL](https://wis-agh64.github.io/frontendmentor/results-summary-component-main/index.html)
-- [Solution code](https://your-live-site-url.com)
+- [Solution code](https://github.com/wis-agh64/frontendmentor/tree/main/results-summary-component-main)
 
 ## My process
 
