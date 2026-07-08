@@ -1149,7 +1149,7 @@ body {
   background: linear-gradient(180deg, rgb(120, 87, 255) 0%, rgb(46, 43, 233) 100%);
 }
 
-.button:hover {
+.button:hover, .button:active {
   cursor: pointer;
   background: HSL(252, 100%, 67%);
   background: linear-gradient(180deg, rgb(120, 87, 255) 0%, rgb(46, 43, 233) 100%);
@@ -1178,8 +1178,8 @@ body {
 }
 
 #resultCircle {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
 }
 
 @media screen and (max-width: 630px) {

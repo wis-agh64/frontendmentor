@@ -126,6 +126,7 @@ $radi: 5,10,15,20,25,30;
     }
 }
 
+// space-between is not valid for align-items, but the declaration gets dropped by the browser, so all good :)
 $flexvals: center, start, end, space-between, flex-start, flex-end, left, right;
 @each $val in $flexvals {
     .flex-align-#{$val} {
@@ -160,7 +161,7 @@ body {
     background: linear-gradient(180deg,rgba(120, 87, 255, 1) 0%, rgba(46, 43, 233, 1) 100%);
 }
 
-.button:hover {
+.button:hover, .button:active{
     cursor: pointer;    
     background: HSL(252, 100%, 67%);
     background: linear-gradient(180deg,rgba(120, 87, 255, 1) 0%, rgba(46, 43, 233, 1) 100%);
@@ -189,8 +190,8 @@ body {
 }
 
 #resultCircle {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
 }
 
 @media screen and (max-width: 630px) {
