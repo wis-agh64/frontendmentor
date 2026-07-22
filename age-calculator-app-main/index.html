@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body class="flex flex-col justify-center items-center">
+  <main style="border-bottom-right-radius: 150px;" class="w-75 py-15 px-5 md:mx-auto md:w-auto md:px-15 bg-white rounded-2xl">
+    <div class="flex justify-between border-b-1 pb-7 md:pb-10 md:pr-35 border-custom-grey mb-10 relative">
+      <div class="flex flex-col">
+        <label id="dayLabel" class="text-xs md:text-lg mb-1 input-label poppins-bold" for="startDay">DAY</label>
+        <input class="w-18 h-12 text-sm md:text-3xl md:w-40 md:h-auto border border-custom-grey poppins-bold mt-1 mr-5 md:py-3 md:px-5 px-2 rounded-md mb-2" type="number" name="startDay" id="startDay" placeholder="DD">
+        <div id="dayError" role="alert" class="text-xs italic text-custom-red invisible">Placeholder</div>
+      </div>
+      <div class="flex flex-col">
+        <label id="monthLabel" class="text-xs md:text-lg mb-1 input-label poppins-bold" for="startMonth">MONTH</label>
+        <input class="w-18 h-12 text-sm md:text-3xl md:w-40 md:h-auto border border-custom-grey poppins-bold mt-1 mr-5 md:py-3 md:px-5 px-2 rounded-md mb-2" type="number" name="startMonth" id="startMonth" placeholder="MM">
+        <div id="monthError" role="alert" class="text-xs italic text-custom-red invisible">Placeholder</div>
+      </div>
+      <div class="flex flex-col">
+        <label id="yearLabel" class="text-xs md:text-lg mb-1 input-label poppins-bold" for="startYear">YEAR</label>
+        <input class="w-18 h-12 text-sm md:text-3xl md:w-40 md:h-auto border border-custom-grey poppins-bold mt-1 md:py-3 md:px-5 px-2 rounded-md mb-2" type="number" name="startYear" id="startYear" placeholder="YYYY">
+        <div id="yearError" role="alert" class="text-xs italic text-custom-red invisible">Placeholder</div>
+      </div>
+      <div id="submitButton" class="flex hover:bg-black bg-custom-purple cursor-pointer rounded-full absolute -bottom-5 right-28 w-10 h-10 p-2 md:w-20 md:h-20 md:-bottom-10 md:right-0 md:p-5">
+        <img src="./assets/images/icon-arrow.svg" alt="Arrow icon">
+      </div>
+    </div>
+    <div>
+      <div class="text-4xl md:text-8xl flex poppins-extrabold-italic b-2">
+        <div id="yearOutput" class="dash mr-3">- -</div><div>years</div>
+      </div>
+      <div class="text-4xl md:text-8xl flex poppins-extrabold-italic b-2">
+        <div id="monthOutput" class="dash mr-3">- -</div><div>months</div>
+      </div>
+      <div class="text-4xl md:text-8xl flex poppins-extrabold-italic b-2">
+        <div id="dayOutput" class="dash mr-3">- -</div><div>days</div>
+      </div>
+    </div>
+  </main>
+  <footer class="attribution fixed bottom-1 text-indigo-800 w-full text-xs text-center">
+    Challenge by <a class="underline" href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. <br>
+    Coded by Wissam Alghabra.
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>

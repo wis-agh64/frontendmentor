@@ -1,0 +1,67 @@
+@layer utilities {
+    .bg-custom-purple {
+        background-color: hsl(259, 100%, 65%);
+    }
+
+    .border-custom-grey {
+        border-color: hsl(0, 0%, 86%);
+    }
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.dash {
+    color: hsl(259, 100%, 65%);
+}
+
+.input-label {
+    color: hsl(0, 1%, 44%);
+}
+
+.text-custom-red {
+    color: hsl(0, 100%, 67%);
+}
+
+.border-custom-red {
+    border-color: hsl(0, 100%, 67%);
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: hsl(0, 0%, 94%);
+}
+
+input:focus {
+    outline: none;
+    border-color: hsl(259, 100%, 65%);
+} 
+
+.apply-animation {
+    animation-name: output-animation;
+    animation-duration: 0.5s;
+}
+
+@keyframes output-animation {
+    0%   { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
