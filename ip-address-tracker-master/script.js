@@ -1,4 +1,4 @@
-const API_ENDPOINT = "https://api-proxy.potatosoup.workers.dev"
+const API_ENDPOINT = "https://geo.ipify.org/api/v2/country,city";
 // source: https://uibakery.io/regex-library/ip-address
 const IP_REGEX = /^(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 // source: https://uibakery.io/regex-library/url
@@ -30,13 +30,14 @@ const displayOutput = (data) => {
     map.flyTo(marker.getLatLng(), 12, { duration: 1.5 });
 }
 
-const getData = (ipAddress, domain) => {
+const getData = (key, ipAddress, domain) => {
     const params = new URLSearchParams();
+    params.append("apiKey", key);
     params.append("ipAddress", ipAddress);
     params.append("domain", domain);
-    const url = `${API_ENDPOINT}?${params}`;
+    const apiUrl = `${API_ENDPOINT}?${params}`;
 
-    fetch(url)
+    fetch(apiUrl)
     .then(response => response.json())
     .then(data => displayOutput(data));
 }
@@ -45,18 +46,23 @@ const initApp = () => {
     const searchButton = document.getElementById("searchButton");
     const searchInput = document.getElementById("searchInput");
 
-    getData("", "");
+    fetch("./key")
+    .then(response => response.text())
+    .then(key => {
+        console.log(key);
+        searchButton.onclick = () => {
+            const input = searchInput.value;
+            let ipAddress = "";
+            let domain = "";
+    
+            if (IP_REGEX.test(input)) ipAddress = input;
+            if (URL_REGEX.test(input)) domain = input;
+            
+            getData(key, ipAddress, domain);
+        }
 
-    searchButton.onclick = () => {
-        const input = searchInput.value;
-        let ipAddress = "";
-        let domain = "";
-
-        if (IP_REGEX.test(input)) ipAddress = input;
-        if (URL_REGEX.test(input)) domain = input;
-        
-        getData(ipAddress, domain);
-    }
+        getData(key, "", "");
+    })
 }
 
 if (document.readyState !== 'loading') {
