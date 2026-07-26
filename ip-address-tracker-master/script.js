@@ -55,7 +55,7 @@ const initApp = () => {
         if (IP_REGEX.test(input)) ipAddress = input;
         if (URL_REGEX.test(input)) domain = input;
         
-        getData(key, ipAddress, domain);
+        getData(ipAddress, domain);
     }
 }
 
