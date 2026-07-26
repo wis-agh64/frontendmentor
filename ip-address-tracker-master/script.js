@@ -41,7 +41,7 @@ const getData = (ipAddress, domain) => {
     .then(data => displayOutput(data));
 }
 
-document.onload(() => {
+const initApp = () => {
     const searchButton = document.getElementById("searchButton");
     const searchInput = document.getElementById("searchInput");
 
@@ -57,4 +57,10 @@ document.onload(() => {
         
         getData(key, ipAddress, domain);
     }
-});
+}
+
+if (document.readyState !== 'loading') {
+    initApp();
+} else {
+    document.addEventListener('DOMContentLoaded', initApp);
+}
